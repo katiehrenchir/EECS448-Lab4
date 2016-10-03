@@ -1,0 +1,76 @@
+<html>
+    <head>
+
+
+		<script type="text/javascript"
+				src="../js/formChecker.js">
+		</script>
+
+
+	<link href="../css/style.css"
+				rel="stylesheet"
+				type="text/css"/>
+
+  <title>Lab 4 - Exericise 3</title>
+    </head>
+<body>
+<h1>Cat Web Store</h1>
+	
+	<!-- onsumbit code taken from http://stackoverflow.com/questions/22828961/how-to-prevent-button-from-submitting-the-form-and-call-javascript-method-with -->
+    <form action="../php/customerBackend.php" method="post" id="store" onsubmit=" return checkForm()">
+		
+		<div class="itemBlock" >
+
+		<p class="itemName" >Toy Mouse</p>
+		<p class="itemPrice">$3.00</p> <br><br>
+		<img src = "../img/toymouse.jpg" id = "toymouse" height=300/><br>
+		<input type="number" name="toymousequantity" id="mousequant" value=0>
+		<br>
+
+		</div>
+
+
+		<div class="itemBlock" >
+
+		<p class="itemName">Catnip</p>
+		<p class="itemPrice">$5.00</p> <br><br>
+		<img src = "../img/catnip.jpg" id = "catnip" height=300/><br>
+		<input type="number" name="catnipquantity" id="catnipquant" value=0>
+		<br>
+		</div>
+
+		<div class="itemBlock" >
+
+		<!-- sweater image from https://www.etsy.com/listing/244552292/cat-hoodie-cat-clothes-coral-and -->
+		<p class="itemName">Sweater</p>
+		<p class="itemPrice">$65.00</p> <br><br>
+		<img src = "../img/sweater.jpg" id = "sweater" height=300/><br>
+		<input type="number" name="sweaterquantity" id="sweaterquant" value=0>
+		<br>
+		</div>
+
+
+		<div class="completeOrderBlock" >
+
+        <br>Shipping:<br>
+        <input type="radio" name="shipping" value="free" > 7 day - FREE <br>
+ 		<input type="radio" name="shipping" value="threeday"> 3 day - $5.00<br>
+ 		<input type="radio" name="shipping" value="overnight"> Overnight - $50.00<br>
+
+		<br>
+
+		<br>
+		Username:
+		<input type="email" name="username" id="un">
+		<br>
+		Password:
+		<input type="password" name="password" id="ps">	
+		<br><br>
+
+        <input type="submit" value="Submit Order"> 
+        <button type ="reset" value="Reset">Reset</button>
+
+		</div>
+    </form>
+</body>
+</html> 
